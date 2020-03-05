@@ -6,4 +6,5 @@ import javax.servlet.http.HttpSession;
 public interface FailInterface {
 
     void getFile(HttpSession session, HttpServletResponse response, String dir, String name)throws Exception;
+    
 }
