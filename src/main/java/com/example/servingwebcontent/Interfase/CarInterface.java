@@ -6,8 +6,6 @@ import org.springframework.http.ResponseEntity;
 public interface CarInterface {
 
     Car PostCar(Car car);
-
-
     ResponseEntity getCars(Integer id);
 
 }
