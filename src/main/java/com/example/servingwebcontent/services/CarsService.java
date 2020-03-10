@@ -1,8 +1,8 @@
-package com.example.servingwebcontent.Services;
+package com.example.servingwebcontent.services;
 
-import com.example.servingwebcontent.Interfase.CarInterface;
-import com.example.servingwebcontent.Models.Car;
-import com.example.servingwebcontent.Repositorys.CarsRepository;
+import com.example.servingwebcontent.services.implem.CarInterface;
+import com.example.servingwebcontent.models.Car;
+import com.example.servingwebcontent.repositorys.CarsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

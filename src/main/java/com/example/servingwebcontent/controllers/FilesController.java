@@ -1,8 +1,7 @@
-package com.example.servingwebcontent.Controllers;
+package com.example.servingwebcontent.controllers;
 
 
-import com.example.servingwebcontent.Interfase.FailInterface;
-import com.example.servingwebcontent.Services.FilesService;
+import com.example.servingwebcontent.services.implem.FailInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

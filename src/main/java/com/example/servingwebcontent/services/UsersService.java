@@ -1,8 +1,8 @@
-package com.example.servingwebcontent.Services;
+package com.example.servingwebcontent.services;
 
-import com.example.servingwebcontent.Interfase.UserInterface;
-import com.example.servingwebcontent.Models.User;
-import com.example.servingwebcontent.Repositorys.UsersRepository;
+import com.example.servingwebcontent.services.implem.UserInterface;
+import com.example.servingwebcontent.models.User;
+import com.example.servingwebcontent.repositorys.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Transactional
 public class UsersService implements UserInterface  {
     @Autowired
     private UsersRepository usersRepository;

@@ -1,6 +1,6 @@
-package com.example.servingwebcontent.Interfase;
+package com.example.servingwebcontent.services.implem;
 
-import com.example.servingwebcontent.Models.User;
+import com.example.servingwebcontent.models.User;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

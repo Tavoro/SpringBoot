@@ -1,6 +1,6 @@
-package com.example.servingwebcontent.Interfase;
+package com.example.servingwebcontent.services.implem;
 
-import com.example.servingwebcontent.Models.Car;
+import com.example.servingwebcontent.models.Car;
 import org.springframework.http.ResponseEntity;
 
 public interface CarInterface {
