@@ -1,9 +1,8 @@
-package com.example.servingwebcontent.Controllers;
+package com.example.servingwebcontent.controllers;
 
 
-import com.example.servingwebcontent.Interfase.CarInterface;
-import com.example.servingwebcontent.Models.Car;
-import com.example.servingwebcontent.Services.CarsService;
+import com.example.servingwebcontent.services.implem.CarInterface;
+import com.example.servingwebcontent.models.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

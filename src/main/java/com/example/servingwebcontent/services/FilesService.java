@@ -1,8 +1,7 @@
-package com.example.servingwebcontent.Services;
+package com.example.servingwebcontent.services;
 
 
-import com.example.servingwebcontent.Interfase.FailInterface;
-import com.example.servingwebcontent.Repositorys.UsersRepository;
+import com.example.servingwebcontent.services.implem.FailInterface;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.stereotype.Service;
 

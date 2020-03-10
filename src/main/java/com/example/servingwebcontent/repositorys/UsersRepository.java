@@ -1,6 +1,6 @@
-package com.example.servingwebcontent.Repositorys;
+package com.example.servingwebcontent.repositorys;
 
-import com.example.servingwebcontent.Models.User;
+import com.example.servingwebcontent.models.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

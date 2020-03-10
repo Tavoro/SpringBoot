@@ -1,4 +1,5 @@
 atabaseChangeLog:
+databaseChangeLog:
   - logicalFilePath: changelog/db.changelog.yaml
   - changeSet:
       id: 1

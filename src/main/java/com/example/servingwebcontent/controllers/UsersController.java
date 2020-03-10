@@ -1,8 +1,7 @@
-package com.example.servingwebcontent.Controllers;
+package com.example.servingwebcontent.controllers;
 
-import com.example.servingwebcontent.Interfase.UserInterface;
-import com.example.servingwebcontent.Models.User;
-import com.example.servingwebcontent.Services.UsersService;
+import com.example.servingwebcontent.services.implem.UserInterface;
+import com.example.servingwebcontent.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
