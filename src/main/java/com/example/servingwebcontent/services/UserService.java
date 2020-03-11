@@ -1,15 +1,15 @@
-package com.example.servingwebcontent.services.implem;
+package com.example.servingwebcontent.services;
 
 import com.example.servingwebcontent.models.User;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-public interface UserInterface {
+public interface UserService {
 
     User postUser(User user);
 
-    ResponseEntity delUser(Integer Id);
+    ResponseEntity<Object> delUser(Integer Id);
 
     User editUser(User user);
 
@@ -18,5 +18,10 @@ public interface UserInterface {
     List<User> getUsers2();
 
     List<User> findByName(String s);
+
+    List<User> qwer();
+
+    void vstavka();
+
 
 }

@@ -1,7 +1,7 @@
 package com.example.servingwebcontent.controllers;
 
 
-import com.example.servingwebcontent.services.implem.FailInterface;
+import com.example.servingwebcontent.services.FailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,20 +10,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 /**
  * @author Filatov
  * Контроллер для скачивания файла, с помощью сервиса FilesService.
  * Пример запроса в браузере (http://localhost:8080/download?name=primer.txt&dir=C:/)
  */
 @RestController
-@RequestMapping(value="/download")
+@RequestMapping(value = "/download")
 public class FilesController {
 
     @Autowired
-    FailInterface failInterface;
+    FailService failService;
 
     /**
-     *Метод сервиса FilesService для скачки файла.
+     * Метод сервиса FilesService для скачки файла.
+     *
      * @param session  Сессия
      * @param response Сервлет
      * @param dir      Путь к файлу
@@ -34,6 +36,6 @@ public class FilesController {
     public void getFile(HttpSession session, HttpServletResponse response,
                         @RequestParam(name = "dir") String dir,
                         @RequestParam(name = "name") String name) throws Exception {
-        failInterface.getFile(session,response,dir,name);
+        failService.getFile(session, response, dir, name);
     }
 }

@@ -5,23 +5,16 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Модель Юзера.
  * Используется Ломбок.
  */
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@EqualsAndHashCode
-
+@Data
 @Entity
-
 @Table(name = "a_user")
-
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,9 +35,6 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "car_id", referencedColumnName = "id")
     )
     private List<Car> cars = new ArrayList<>();
-
-
-
 
 
 }

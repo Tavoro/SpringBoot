@@ -9,17 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@EqualsAndHashCode
+@Data
 @Entity
 
 @Table(name = "a_car")
 
-public class Car {
+public class Car implements Comparable<Car> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,12 +29,12 @@ public class Car {
     private Integer nomer;
 
     @JsonBackReference
-    @ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "cars")
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "cars")
     private List<User> users = new ArrayList<>();
 
 
-
-
-
-
+    @Override
+    public int compareTo(Car car) {
+        return this.getNomer() - car.getNomer();
+    }
 }
