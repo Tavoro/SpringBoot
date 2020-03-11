@@ -42,10 +42,11 @@ public class UsersController {
     public List<User> findByName(@RequestParam(name = "name", required = false) String name) {
         return userService.findByName(name);
     }
+
     @PutMapping
     public User editUser(User user) {
         return userService.editUser(user);
     }
 
 
-}   
+}

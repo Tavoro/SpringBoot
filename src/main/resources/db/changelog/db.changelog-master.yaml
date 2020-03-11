@@ -1,6 +1,6 @@
-atabaseChangeLog:
+
 databaseChangeLog:
-  - logicalFilePath: changelog/db.changelog.yaml
+  - logicalFilePath: db/changelog/db.changelog-master.yaml
   - changeSet:
       id: 1
       author: Pavel

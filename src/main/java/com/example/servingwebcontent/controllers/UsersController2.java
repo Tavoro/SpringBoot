@@ -2,16 +2,14 @@ package com.example.servingwebcontent.controllers;
 
 import com.example.servingwebcontent.models.User;
 import com.example.servingwebcontent.services.UserService;
-
-
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
-import com.example.servingwebcontent.repositorys.UsersRepository;
 
-import java.util.Collection;
+
 import java.util.List;
-
 
 /**
  * @author Filatov
@@ -19,29 +17,19 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/fin")
-
-
+@RequestMapping("/find")
 public class UsersController2 {
 
-    @Autowired
-    private UserService userService;
 
-    @Autowired
-    private UsersRepository usersRepository;
+
+
+
 
     @GetMapping
-    public List<User> get(){
-      return userService.findByName("Юля");
+    public String allUsers() {
+//
+        return "find";
     }
-
-
-//    @GetMapping
-//    public String allUsers() {
-//
-//
-//        return "find";
-//    }
 
 
 
