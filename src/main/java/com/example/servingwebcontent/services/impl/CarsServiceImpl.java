@@ -1,6 +1,6 @@
-package com.example.servingwebcontent.services;
+package com.example.servingwebcontent.services.impl;
 
-import com.example.servingwebcontent.services.implem.CarInterface;
+import com.example.servingwebcontent.services.CarInterface;
 import com.example.servingwebcontent.models.Car;
 import com.example.servingwebcontent.repositorys.CarsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CarsService implements CarInterface {
+public class CarsServiceImpl implements CarInterface {
     @Autowired
     CarsRepository carsRepository;
 
@@ -17,13 +17,13 @@ public class CarsService implements CarInterface {
     public Car PostCar(Car car) {return carsRepository.save(car);}
 
     @Override
-    public ResponseEntity getCars(Integer id) {
+    public Object getCars(Integer id) {
 
         if  (id == null) {
-            return ResponseEntity.ok(carsRepository.findAll());
+            return carsRepository.findAll();
         }
         else {
-            return ResponseEntity.ok(carsRepository.findById(id).get());
+            return carsRepository.findById(id).get();
 
         }
     }

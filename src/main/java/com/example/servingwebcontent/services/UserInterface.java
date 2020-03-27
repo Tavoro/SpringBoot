@@ -1,4 +1,4 @@
-package com.example.servingwebcontent.services.implem;
+package com.example.servingwebcontent.services;
 
 import com.example.servingwebcontent.models.User;
 import org.springframework.http.ResponseEntity;
@@ -9,7 +9,7 @@ public interface UserInterface {
 
     User postUser(User user);
 
-    ResponseEntity delUser(Integer Id);
+    ResponseEntity<Object> delUser(Integer Id);
 
     User editUser(User user);
 

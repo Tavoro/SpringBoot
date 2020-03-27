@@ -1,4 +1,4 @@
-package com.example.servingwebcontent.services.implem;
+package com.example.servingwebcontent.services;
 
 import com.example.servingwebcontent.models.Car;
 import org.springframework.http.ResponseEntity;
@@ -6,6 +6,6 @@ import org.springframework.http.ResponseEntity;
 public interface CarInterface {
 
     Car PostCar(Car car);
-    ResponseEntity getCars(Integer id);
+    Object getCars(Integer id);
 
 }

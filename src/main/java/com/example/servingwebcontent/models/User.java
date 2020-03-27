@@ -18,6 +18,7 @@ import java.util.*;
 @ToString
 @EqualsAndHashCode
 
+
 @Entity
 
 @Table(name = "a_user")
@@ -42,8 +43,6 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "car_id", referencedColumnName = "id")
     )
     private List<Car> cars = new ArrayList<>();
-
-
 
 
 

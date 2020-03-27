@@ -19,7 +19,7 @@ import java.util.List;
 
 @Table(name = "a_car")
 
-public class Car {
+public class Car implements Comparable<Car> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,8 +38,8 @@ public class Car {
     private List<User> users = new ArrayList<>();
 
 
-
-
-
-
+    @Override
+    public int compareTo(Car car) {
+        return this.getNomer() - car.getNomer();
+    }
 }

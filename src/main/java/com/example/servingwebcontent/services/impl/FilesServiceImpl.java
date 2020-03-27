@@ -1,7 +1,7 @@
-package com.example.servingwebcontent.services;
+package com.example.servingwebcontent.services.impl;
 
 
-import com.example.servingwebcontent.services.implem.FailInterface;
+import com.example.servingwebcontent.services.FailInterface;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 
 @Service
-public class FilesService implements FailInterface {
+public class FilesServiceImpl implements FailInterface {
 
     @Override
     public void getFile(HttpSession session, HttpServletResponse response,String dir,String name) throws Exception {

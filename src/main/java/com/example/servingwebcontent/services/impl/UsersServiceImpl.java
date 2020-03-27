@@ -1,8 +1,8 @@
-package com.example.servingwebcontent.services;
+package com.example.servingwebcontent.services.impl;
 
-import com.example.servingwebcontent.services.implem.UserInterface;
 import com.example.servingwebcontent.models.User;
 import com.example.servingwebcontent.repositorys.UsersRepository;
+import com.example.servingwebcontent.services.UserInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,8 @@ import java.util.List;
 
 @Service
 @Transactional
-public class UsersService implements UserInterface  {
+public class UsersServiceImpl implements UserInterface {
+
     @Autowired
     private UsersRepository usersRepository;
 
@@ -24,10 +25,12 @@ public class UsersService implements UserInterface  {
 
     ////////////////////////////////////////////////////////////////////////////
     @Override
-    public ResponseEntity delUser(Integer Id){
+    public ResponseEntity<Object> delUser(Integer Id){
         usersRepository.deleteById(Id);
         return ResponseEntity.ok(HttpStatus.OK);
     }
+
+    //
 
     ///////////////////////////////////////////////////////////////////////////
     @Override
